@@ -1,0 +1,35 @@
+{
+  "name": "generator-thomnpm",
+  "version": "0.0.0",
+  "description": "Thom's NPM boilerplate generator.",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "ThomWright/generator-thomnpm",
+  "author": {
+    "name": "Thom Wright",
+    "email": "github@thomwright.co.uk",
+    "url": "https://github.com/ThomWright"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "yeoman-generator": "^0.19.0",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "babel": "^5.4.7",
+    "babel-eslint": "^3.1.9",
+    "babel-runtime": "^5.4.7",
+    "chai": "^3",
+    "eslint": "^0",
+    "mocha": "^2.2.5"
+  }
+}
