@@ -1,10 +1,18 @@
 sudo: false
 language: node_js
 node_js:
-  - 'iojs'
-  - '0.12'
-  - '0.10'
+- iojs
+- '0.12'
+- '0.10'
 notifications:
   email:
     on_success: never
     on_failure: always
+deploy:
+  provider: npm
+  email: npm@thomwright.co.uk
+  api_key:
+    secure: DCP4JFdxXEgBtBd0unAsFSyDBIpitdP39280ylzGKvc3exA+Ubrq7vOQLLDAXNL41APwZNfrDdeOwzbiEoEvTjNd+yTRdtTYcSrYhRHueHhfU3yfZ+4cGQfpxlu3jYcRBgyqONzK78hhq++idUxYAhwkcN3s5gIHnZe/eW2WlMflnYW9DkvyCFgGYzaWiUYEbqdO9j6W6c27JLBbV9P25R9TaBdejR4zZ3VQIszgg9yA/4ghdH9Q/VL2mRfcOpOalBAmWG2LuqjB84/gE5Dcyhqmi4Bs9AuC3Y9ewSLiAhidKs+G5aWVbq/XgF3B2jHi2/pTTAIGpFWSqMnU5H3zZdsBvSzOAX1xu+8gBVvC7rmL9+evo8Bbye3O3j+SeQNWofOzYsZ4kOSg4Z8bBHP6He7UCmaZ0Y/pZSYCoXak7yyG1Luw2h4wu/kT8R3NGs++ActsPh5obfFvD2LKWl7FU6hpw91kevAvz2mWYfgbEpUlXzANwPVRCGK/JS2dXkROzUWTgEw+jmUVdOi5sXqqCDyRMCNvq6O5UoHYy1Om7qIMTaXhT/krwkDLSaZdF2dayc5XxB1GhknWQJKMdqM6a/AaALlLsvdXHWMrPnx9nc6U18rf6SBQx+UnCaH9+42lLwHfwWNldJx99/+034gWimxJqYAXJAR2V2vSSymhWz8=
+  on:
+    tags: true
+    repo: ThomWright/generator-thomnpm
