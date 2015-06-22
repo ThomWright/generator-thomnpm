@@ -1,4 +1,9 @@
-# generator-thomnpm [![Build Status](https://secure.travis-ci.org/ThomWright/generator-thomnpm.png?branch=master)](https://travis-ci.org/ThomWright/generator-thomnpm)
+# generator-thomnpm
+[![Travis](https://img.shields.io/travis/ThomWright/generator-thomnpm.svg?style=flat-square)](https://travis-ci.org/ThomWright/generator-thomnpm)
+[![npm](https://img.shields.io/npm/v/generator-thomnpm.svg?style=flat-square)](https://www.npmjs.com/package/generator-thomnpm)
+[![David](https://img.shields.io/david/ThomWright/generator-thomnpm.svg?style=flat-square)](https://david-dm.org/ThomWright/generator-thomnpm)
+[![David](https://img.shields.io/david/dev/ThomWright/generator-thomnpm.svg?style=flat-square)](https://david-dm.org/ThomWright/generator-thomnpm#info=devDependencies)
+
 
 > [Yeoman](http://yeoman.io) generator
 
@@ -32,7 +37,7 @@ npm install -g generator-thomnpm
 Finally, initiate the generator:
 
 ```bash
-yo ThomNPM
+yo thomnpm
 ```
 
 ### Getting To Know Yeoman
