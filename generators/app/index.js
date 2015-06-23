@@ -72,6 +72,10 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('test-setup.js'),
         this.destinationPath('test-setup.js')
       );
+      this.fs.copy(
+        this.templatePath('npmignore'),
+        this.destinationPath('.npmignore')
+      );
     },
 
     readme: function() {
