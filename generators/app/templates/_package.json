@@ -4,7 +4,7 @@
   "description": "<%= description %>",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rimraf dist && babel src --out-dir dist --optional es7.objectRestSpread --optional runtime --ignore \"__tests__\"",
+    "build": "rimraf dist && babel src --out-dir dist",
     "lint": "eslint src/",
     "mocha": "find ./src -wholename \"./*__tests__/*\" | xargs mocha -R spec --require test-setup",
     "test": "npm run lint && npm run mocha",
