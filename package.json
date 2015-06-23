@@ -1,6 +1,6 @@
 {
   "name": "generator-thomnpm",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Thom's NPM boilerplate generator.",
   "license": "MIT",
   "main": "app/index.js",
