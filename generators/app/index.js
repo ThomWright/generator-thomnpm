@@ -4,6 +4,21 @@ var chalk = require('chalk');
 var yosay = require('yosay');
 var path = require('path');
 
+var copyDotFile = function(fileName) {
+  this.fs.copy(
+    this.templatePath(fileName),
+    this.destinationPath('.' + fileName)
+  );
+};
+
+var copyTemplate = function(fileName) {
+  this.fs.copyTpl(
+    this.templatePath('_' + fileName),
+    this.destinationPath(fileName),
+    this.props
+  );
+};
+
 module.exports = yeoman.generators.Base.extend({
 
   initializing: function() {
@@ -39,59 +54,18 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   writing: {
-    packageJson: function() {
-      this.fs.copyTpl(
-        this.templatePath('_package.json'),
-        this.destinationPath('package.json'),
-        this.props
-      );
-    },
-
     projectfiles: function() {
-      this.fs.copy(
-        this.templatePath('editorconfig'),
-        this.destinationPath('.editorconfig')
-      );
-      this.fs.copy(
-        this.templatePath('eslintignore'),
-        this.destinationPath('.eslintignore')
-      );
-      this.fs.copy(
-        this.templatePath('eslintrc'),
-        this.destinationPath('.eslintrc')
-      );
-      this.fs.copy(
-        this.templatePath('gitignore'),
-        this.destinationPath('.gitignore')
-      );
-      this.fs.copy(
-        this.templatePath('travis.yml'),
-        this.destinationPath('.travis.yml')
-      );
+      ['editorconfig', 'eslintignore', 'eslintrc', 'gitignore', 'travis.yml', 'npmignore', 'babelrc']
+        .forEach(copyDotFile.bind(this));
       this.fs.copy(
         this.templatePath('test-setup.js'),
         this.destinationPath('test-setup.js')
       );
-      this.fs.copy(
-        this.templatePath('npmignore'),
-        this.destinationPath('.npmignore')
-      );
     },
 
-    readme: function() {
-      this.fs.copyTpl(
-        this.templatePath('_README.md'),
-        this.destinationPath('README.md'),
-        this.props
-      );
-    },
-
-    license: function() {
-      this.fs.copyTpl(
-        this.templatePath('_LICENSE'),
-        this.destinationPath('LICENSE'),
-        this.props
-      );
+    templates: function() {
+      ['README.md', 'LICENSE', 'package.json']
+        .forEach(copyTemplate.bind(this));
     },
 
     blanks: function() {
