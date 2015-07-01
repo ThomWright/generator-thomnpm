@@ -1,7 +1,4 @@
 {
   "stage": 2,
-  "optional": [],
-  "ignore": [
-    "__tests__"
-  ]
+  "optional": []
 }
