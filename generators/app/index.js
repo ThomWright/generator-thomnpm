@@ -45,21 +45,31 @@ module.exports = yeoman.generators.Base.extend({
       name: 'description',
       message: 'Enter a description of the package:',
       default: ''
+    }, {
+      type: 'confirm',
+      name: 'react',
+      message: 'Are you using React for this project?',
+      default: false
     }];
 
     this.prompt(prompts, function(props) {
       this.props.description = props.description;
+      this.props.react = props.react;
       done();
     }.bind(this));
   },
 
   writing: {
     projectfiles: function() {
-      ['editorconfig', 'eslintignore', 'eslintrc', 'gitignore', 'travis.yml', 'npmignore', 'babelrc']
+      ['editorconfig', 'eslintignore', 'gitignore', 'travis.yml', 'npmignore', 'babelrc']
         .forEach(copyDotFile.bind(this));
       this.fs.copy(
         this.templatePath('test-setup.js'),
         this.destinationPath('test-setup.js')
+      );
+      this.fs.copy(
+        this.templatePath('eslintrc-' + (this.props.react ? 'react' : 'basic')),
+        this.destinationPath('.eslintrc')
       );
     },
 
