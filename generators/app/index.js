@@ -46,6 +46,11 @@ module.exports = yeoman.generators.Base.extend({
       message: 'Enter a description of the package:',
       default: ''
     }, {
+      type: 'input',
+      name: 'org',
+      message: 'What GitHub username/organisation are you using?',
+      default: 'ThomWright'
+    }, {
       type: 'confirm',
       name: 'react',
       message: 'Are you using React for this project?',
@@ -54,6 +59,7 @@ module.exports = yeoman.generators.Base.extend({
 
     this.prompt(prompts, function(props) {
       this.props.description = props.description;
+      this.props.org = props.org;
       this.props.react = props.react;
       done();
     }.bind(this));
