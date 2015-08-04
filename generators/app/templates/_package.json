@@ -28,9 +28,9 @@
   },
   "devDependencies": {
     "babel": "^5.4.7",
-    "babel-eslint": "^3.1.9",
+    "babel-eslint": "^4.0.0",
     "chai": "^3",
-    "eslint": "^0",
+    "eslint": "^1.0.0",
     <% if (react) { %>"eslint-plugin-react": "^3",<% } %>
     "mocha": "^2.2.5",
     "rimraf": "^2.3.4"
