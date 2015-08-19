@@ -80,7 +80,7 @@ module.exports = yeoman.generators.Base.extend({
     },
 
     templates: function() {
-      ['README.md', 'LICENSE', 'package.json']
+      ['README.md', 'LICENSE', 'package.json', 'deploy.sh']
         .forEach(copyTemplate.bind(this));
     },
 

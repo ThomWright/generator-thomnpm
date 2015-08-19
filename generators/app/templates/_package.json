@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rimraf dist && babel src --out-dir dist --ignore \"__tests__\"",
+    "deploy": "./deploy.sh",
     "lint": "eslint src/",
     "mocha": "mocha src/**/*__tests__/* -R spec --require test-setup",
     "test": "npm run lint && npm run mocha",
