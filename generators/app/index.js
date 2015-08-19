@@ -73,14 +73,10 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('test-setup.js'),
         this.destinationPath('test-setup.js')
       );
-      this.fs.copy(
-        this.templatePath('eslintrc-' + (this.props.react ? 'react' : 'basic')),
-        this.destinationPath('.eslintrc')
-      );
     },
 
     templates: function() {
-      ['README.md', 'LICENSE', 'package.json', 'deploy.sh']
+      ['README.md', 'LICENSE', 'package.json', 'deploy.sh', '.eslintrc']
         .forEach(copyTemplate.bind(this));
     },
 
