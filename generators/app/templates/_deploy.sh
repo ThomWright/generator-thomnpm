@@ -7,5 +7,5 @@ if [ $# -eq 0 ]; then
     npm publish
   else
     echo Deploying locally to: $1/node_modules/<%= lowerCaseName %>/
-    cp -R dist $1/node_modules/<%= lowerCaseName %>/
+    cp -a dist/. $1/node_modules/<%= lowerCaseName %>/dist
 fi
