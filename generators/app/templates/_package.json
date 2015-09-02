@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/<%= org %>/<%= name %>",
   "dependencies": {
-    <% if (react) { %>"react": "^0.13"<% } %>
+<% if (react) { %>    "react": "^0.14.0-a"<% } %>
   },
   "devDependencies": {
     "babel": "^5.4.7",
@@ -32,7 +32,7 @@
     "chai": "^3",
     "eslint": "^1.0.0",
     "eslint-config-circuitsim": "^0",
-    <% if (react) { %>"eslint-plugin-react": "^3",<% } %>
+<% if (react) { %>    "eslint-plugin-react": "^3",<% } %>
     "mocha": "^2.2.5",
     "rimraf": "^2.3.4"
   }
